@@ -1,0 +1,12 @@
+node-google-home:
+  build: './node'
+  container_name: 'node'
+  command: 'tail -f /dev/null'
+  working_dir: '/myapps/'
+  volumes:
+    - ./myapps/:/myapps/
+  ports:
+    - '8080:8080'
+    - '8888:8888'
+  environment:
+    - 'TZ=Asia/Tokyo'

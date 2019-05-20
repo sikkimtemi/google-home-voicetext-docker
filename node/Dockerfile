@@ -1,4 +1,4 @@
-FROM node:current
+FROM node:11
 
 RUN npm update -y -g npm
 RUN apt-get update

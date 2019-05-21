@@ -1,6 +1,10 @@
 # google-home-voicetext-docker
 `google-home-voicetext`を動かすためのDocker環境です。
 
+参考URL
+
+https://github.com/sikkimtemi/google-home-voicetext
+
 # 使い方
 ## Dockerコンテナの起動
 

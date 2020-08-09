@@ -12,8 +12,5 @@ services:
     ports:
       - '8080:8080'
       - '8888:8888'
-    environment:
-      - 'TZ=Asia/Tokyo'
-      - 'VOICETEXT_API_KEY=4zgbtchmu6xgme5r'
-      - 'WIRELESS_IP=10.10.254.14'
-      - 'GOOGLE_HOME_IP=10.10.254.7'
+    env_file:
+      - ./.my.env

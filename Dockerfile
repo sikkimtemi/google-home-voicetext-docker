@@ -7,9 +7,10 @@ RUN locale-gen ja_JP.UTF-8
 RUN echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 
 RUN git clone https://github.com/sikkimtemi/google-home-voicetext.git
-WORKDIR google-home-voicetext
+WORKDIR /google-home-voicetext
 RUN npm install
 RUN mkdir firebase-secret
 COPY boot.bash /usr/local/bin/
+COPY firebase.json /google-home-voicetext
 
 CMD ["/usr/local/bin/boot.bash"]

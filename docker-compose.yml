@@ -5,12 +5,10 @@ services:
     build:
       context: ./
     container_name: 'node-google-home'
-    command: '/usr/local/bin/boot.bash'
     working_dir: '/google-home-voicetext/'
-    volumes:
-      - ./myapps/:/google-home-voicetext/
     ports:
       - '8080:8080'
       - '8888:8888'
     env_file:
       - ./.my.env
+    tty: true
